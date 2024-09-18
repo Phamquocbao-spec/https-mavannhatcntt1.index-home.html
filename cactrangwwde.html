@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Web Của Tôi</title>
+    <style>
+        body {
+            background-color: rgb(129, 129, 253);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 94vh;
+            margin: 0;
+        }
+
+        .box {
+            background-color: rgb(129, 129, 253);
+            width: 700px;
+            padding: 20px;
+            text-align: left;
+            overflow-wrap: break-word;
+            width: 80%;
+            max-width: 800px;
+            word-spacing: 1.5px;
+        }
+
+        .menu {
+            word-spacing: 0px;
+            color: rgb(46, 12, 240);
+            font-size: 20px;
+        }
+
+        .menu p {
+            color: black;
+            font-size: 25px;
+        }
+
+        .bix {
+            margin-top: 20px;
+        }
+
+        .bix1 {
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+
+        .bix1:active {
+            color: red;
+        }
+
+        .bix1.purple {
+            color: rgb(25, 6, 119);
+        }
+
+        .bix1 p {
+            margin-top: 5px;
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h1>MỘT SỐ TRANG WED CÓ THỂ GIÚP BẠN HỌC TỐT</h1>
+        <hr>
+        <div class="menu">
+            <div class="bix">
+                <a href="https://coder.husc.edu.vn/problems/">
+                    <div class="bix1">
+                        <li><u><b>Coder - HUSC</u></b></li>
+                        <p>là nền tảng dành cho sinh viên và lập trình viên tại Đại học Khoa học, Đại học Huế. Trang
+                            cung cấp các bài tập lập trình từ cơ bản đến nâng cao, giúp người dùng rèn
+                            luyện kỹ năng giải quyết vấn đề và thi đấu. Ngoài ra, Coder HUSC còn tổ chức các cuộc thi
+                            lập trình, tạo cơ hội cho sinh viên giao lưu và phát triển năng lực. Nền tảng này là nơi lý
+                            tưởng để học hỏi, thử thách bản thân và kết nối với cộng đồng lập trình.
+                        </p>
+                    </div>
+                </a>
+                <hr>
+                <a href="https://oj.codedream.edu.vn/"></a>
+                <div class="bix1">
+                    <li><u><b>Oj.Code</u></b></li>
+                    <p>là nền tảng luyện tập lập trình trực tuyến, phục vụ cho học sinh, sinh viên và những người yêu
+                        thích lập trình. Nền tảng này cung cấp nhiều bài toán đa dạng với các mức độ khó khác nhau, giúp
+                        người dùng cải thiện kỹ năng giải quyết vấn đề và tư duy logic. Ngoài việc luyện tập, Codedream
+                        còn tổ chức các cuộc thi lập trình, tạo cơ hội cho người tham gia thử thách bản thân và giao lưu
+                        với cộng đồng lập trình. Đây là nơi tuyệt vời để học hỏi và nâng cao kỹ năng lập trình.
+                    </p>
+                </div>
+                </a>
+            </div>
+        </div>
+        <hr>
+        <p>........</p>
+        <script>
+            const bix1 = document.querySelectorAll('.bix1');
+
+            bix1.forEach(item => {
+                item.addEventListener('click', () => {
+                    item.classList.add('active');
+                    setTimeout(() => {
+                        item.classList.remove('active');
+                        item.classList.add('purple');
+                    }, 250);
+                });
+            });
+        </script>
+</body>
+
+</html>

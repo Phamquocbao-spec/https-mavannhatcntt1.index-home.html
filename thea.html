@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chữ nhấp nháy rồi chuyển màu</title>
+    <style>
+        body {
+            text-align: center;
+            /* Căn giữa văn bản */
+            margin: 0;
+            /* Bỏ margin */
+            height: 20vh;
+            /* Chiều cao toàn bộ viewport */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* Căn giữa theo chiều dọc */
+        }
+
+        .highlight {
+            color: blue;
+            /* Màu chữ mặc định */
+            cursor: pointer;
+            /* Con trỏ khi rê chuột */
+            transition: color 0.3s;
+            /* Hiệu ứng chuyển màu */
+            text-decoration: none;
+            /* Bỏ gạch chân cho liên kết */
+            margin: 10px 0;
+            /* Khoảng cách giữa các hàng chữ */
+            font-size: 30px;
+        }
+
+        .highlight.active {
+            color: red;
+            /* Màu chữ khi nhấp vào */
+        }
+
+        .highlight.purple {
+            color: purple;
+            /* Màu tím */
+        }
+
+        .box h1 {
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <DIv class="box">
+        <h1>CHÀO CÔ VÀ CÁC BẠN NHÉ!</h1>
+    </DIv>
+    <a href="hanhtrinh.html" class="highlight"><u>Đây là trang wed đầu tay của mình.</u></a>
+
+
+    <script>
+        const highlights = document.querySelectorAll('.highlight');
+
+        highlights.forEach(item => {
+            item.addEventListener('click', (event) => {
+                event.preventDefault(); // Ngăn chặn chuyển trang ngay lập tức
+                // Thêm lớp 'active' vào hàng được nhấn
+                item.classList.add('active');
+
+                // Đặt thời gian để chuyển sang màu tím sau 250 milliseconds
+                setTimeout(() => {
+                    item.classList.remove('active'); // Xóa lớp 'active'
+                    item.classList.add('purple'); // Thêm lớp 'purple'
+
+                    // Chuyển hướng đến trang mới
+                    window.location.href = item.href; // Chuyển đến liên kết
+                }, 250); // 250 milliseconds
+            });
+        });
+    </script>
+</body>
+
+</html>

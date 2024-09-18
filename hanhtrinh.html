@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Web Của Tôi</title>
+    <style>
+        body {
+            background-color: rgb(129, 129, 253);
+            /* Màu nền xanh dương */
+            display: flex;
+            /* Sử dụng Flexbox để căn giữa */
+            justify-content: center;
+            /* Căn giữa theo chiều ngang */
+            align-items: center;
+            /* Căn giữa theo chiều dọc */
+            height: 55vh;
+            /* Chiều cao 100% viewport */
+            margin: 0;
+            /* Xóa margin mặc định */
+        }
+
+        .box {
+            background-color: rgb(129, 129, 253);
+            /* Màu khung trắng */
+            width: 700px;
+            /* Chiều rộng 330px */
+            padding: 20px;
+            /* Khoảng cách bên trong khung */
+            /*  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          Đổ bóng cho khung */
+            text-align: left;
+            /* Căn trái chữ trong khung */
+            overflow-wrap: break-word;
+            /* Tự động xuống hàng khi gần viền */
+            width: 80%;
+            /* Đặt chiều rộng khung là 80% chiều rộng của viewport */
+            max-width: 800px;
+            /* Đặt chiều rộng tối đa nếu cần */
+            word-spacing: 8px;
+        }
+
+        .menu {
+            word-spacing: 0px;
+            color: rgb(46, 12, 240);
+            font-size: 20px;
+        }
+
+        .menu p {
+            color: black;
+            font-size: 25px;
+        }
+
+        .bix {
+            margin-top: 20px;
+        }
+
+        .exercise-fant {
+            word-spacing: 0px;
+            color: rgb(46, 12, 240);
+            font-size: 20px;
+        }
+
+        .exercise-fant p {
+            color: black;
+            font-size: 25px;
+        }
+
+        .bix1 {
+            /*colo
+            r: black; Màu chữ mặc định */
+            transition: color 0.3s;
+            /* Hiệu ứng chuyển màu */
+            cursor: pointer;
+            margin-top: 40px;
+        }
+
+        .bix1:active {
+            color: red;
+            /*  Màu chữ khi rê chuột vào */
+        }
+
+        .bix1.purple {
+            color: rgb(25, 6, 119);
+            /* Màu tím */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h1>HÀNH TRÌNH HỌC WED CỦA TÔI!</h1>
+        <hr>
+        <div class="menu">
+            <p>Nội dung chính:</p>
+            <hr>
+            <div class="bix">
+                <a href="gioithieubnathan.html">
+                    <div class="bix1">
+                        <li><u>1.Trang wed đầu tiên</u></li>
+                    </div>
+                </a>
+                <a href="thea.html">
+                    <div class="bix1">
+                        <li><u></u>2.Bài tập thẻ "a"</u></li>
+                    </div>
+                </a>
+                <a href="baivan.htm">
+                    <div class="bix1">
+                        <li><u>3.Bài tập văn bản</u></li>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const bix1 = document.querySelectorAll('.bix1');
+
+        bix1.forEach(item => {
+            item.addEventListener('click', () => {
+                // Thêm lớp 'active' vào hàng được nhấn
+                item.classList.add('active');
+
+                // Đặt thời gian để chuyển sang màu tím sau 0.5 giây
+                setTimeout(() => {
+                    item.classList.remove('active'); // Xóa lớp 'active'
+                    item.classList.add('purple'); // Thêm lớp 'purple'
+                }, 250); // 500 milliseconds = 0.5 second
+            });
+        });
+    </script>
+</body>
+
+</html>

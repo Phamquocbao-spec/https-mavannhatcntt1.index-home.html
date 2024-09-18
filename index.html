@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Web Của Tôi</title>
+    <link rel="stylesheet" href="https://mmm.html">
+    <style>
+        body {
+            background-color: rgb(129, 129, 253);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+            margin: 0;
+        }
+
+        .box {
+            background-color: rgb(129, 129, 253);
+            width: 700px;
+            padding: 20px;
+            text-align: left;
+            overflow-wrap: break-word;
+            width: 80%;
+            max-width: 800px;
+            word-spacing: 8px;
+        }
+
+        .menu {
+            word-spacing: 0px;
+            color: rgb(46, 12, 240);
+            font-size: 20px;
+        }
+
+        .menu p {
+            color: black;
+            font-size: 25px;
+        }
+
+        .bix {
+            margin-top: 20px;
+        }
+
+        .exercise-fant {
+            word-spacing: 0px;
+            color: rgb(46, 12, 240);
+            font-size: 20px;
+        }
+
+        .exercise-fant p {
+            color: black;
+            font-size: 25px;
+        }
+
+        .bix1 {
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+
+        .bix1:active {
+            color: red;
+        }
+
+        .bix1.purple {
+            color: rgb(25, 6, 119);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h1>BLOG CÁ NHÂN CỦA MA VĂN NHẬT (NHÓM 13)</h1>
+        <hr>
+        <div class="menu">
+            <p>Nội dung chính:</p>
+            <hr>
+            <div class="bix">
+                <a href="hanhtrinh.html">
+                    <div class="bix1">
+                        <li><u><b>1.Hành trình học wed</u></b></li>
+                    </div>
+                </a>
+                <a href="cactrangwwde.html">
+                    <div class="bix1">
+                        <li><u><b>2.Các wed hữi ích</u></b></li>
+                    </div>
+                </a>
+                <a href="trainghiem.html">
+                    <div class="bix1">
+                        <li><u><b>3.Blog trải nghiệm</u></b></li>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <hr>
+        <div class="exercise-fant">
+            <p>Các bài tập:</p>
+            <hr>
+            <div class="bix">
+                <a href="gioithieubnathan.html">
+                    <div class="bix1">
+                        <li><u><b>Bài 1</u></b></li>
+                    </div>
+                </a>
+                <a href="cactrangwwde.html">
+                    <div class="bix1">
+                        <li><u><b>Bài 2</u></b></li>
+                    </div>
+                </a>
+                <a href="trainghiem.html">
+                    <div class="bix1">
+                        <li><u><b>Bài 3</u></b></li>
+                    </div>
+                </a>
+                <a href="tkb.html">
+                    <div class="bix1">
+                        <li><u><b>Bài 4</u></b></li>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        const bix1 = document.querySelectorAll('.bix1');
+
+        bix1.forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.add('active');
+                setTimeout(() => {
+                    item.classList.remove('active');
+                    item.classList.add('purple');
+                }, 250);
+            });
+        });
+    </script>
+</body>
+
+</html>

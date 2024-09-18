@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>c</title>
+    <style>
+        body {
+            text-align: center;
+            margin: 0;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .highlight {
+            color: blue;
+            cursor: pointer;
+            transition: color 0.3s;
+            text-decoration: none;
+
+            margin: 10px 0;
+        }
+
+        .highlight.active {
+            color: red;
+        }
+
+        .highlight.purple {
+            color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="link-cua-ban.html" class="highlight">Hàng chữ 1: Nhấn vào đây để chữ nhấp nháy đỏ rồi chuyển thành tím.</a>
+    <a href="link-cua-ban.html" class="highlight">Hàng chữ 2: Nhấn vào đây để chữ nhấp nháy đỏ rồi chuyển thành tím.</a>
+    <a href="link-cua-ban.html" class="highlight">Hàng chữ 3: Nhấn vào đây để chữ nhấp nháy đỏ rồi chuyển thành tím.</a>
+
+    <script>
+        const highlights = document.querySelectorAll('.highlight');
+
+        highlights.forEach(item => {
+            item.addEventListener('click', (event) => {
+                event.preventDefault();
+                item.classList.add('active');
+                setTimeout(() => {
+                    item.classList.remove('active');
+                    item.classList.add('purple');
+                    window.location.href = item.href;
+                }, 250);
+            });
+        });
+    </script>
+</body>
+
+</html>

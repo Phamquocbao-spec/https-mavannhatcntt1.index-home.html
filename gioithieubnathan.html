@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Web Của Tôi</title>
+    <style>
+        body {
+            background-color: rgb(129, 129, 253);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+            margin: 0;
+            margin-top: 50px;
+        }
+
+        .box {
+            background-color: rgb(129, 129, 253);
+            width: 700px;
+            padding: 20px;
+            text-align: left;
+            overflow-wrap: break-word;
+            width: 80%;
+            max-width: 800px;
+            word-spacing: 8px;
+        }
+
+        .menu {
+            word-spacing: 0px;
+            color: rgb(46, 12, 240);
+            font-size: 5px;
+        }
+
+        div p b {
+            font-size: 20px;
+        }
+
+        div p span {
+            font-size: 20px;
+        }
+
+        .menu p {
+            color: black;
+            font-size: 25px;
+        }
+
+        .bix {
+            margin-top: 20px;
+        }
+
+        .bix1 {
+            transition: color 0.3s;
+            cursor: pointer;
+            margin-left: 30px;
+        }
+
+        .bix1:active {
+            color: red;
+        }
+
+        .bix1.purple {
+            color: rgb(25, 6, 119);
+        }
+
+        .bix1 b i {
+            margin-left: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h1>PHẦN GIỚI THIỆU</h1>
+        <div class="menu">
+            <b>
+                <p>Xin chào cô và các bạn:</p>
+            </b>
+            <div>
+                <p><b>Mình tên là:</b><span> Ma Văn Nhật</span></p>
+            </div>
+            <div>
+                <p><b>Ngày sinh: </b><span>??/??/2006</span></p>
+            </div>
+            <div>
+                <p><b>Quê quán:</b><span> Xã Phú Đa Huyện phú vang Tỉnh Thừa Thiên Huế</span></p>
+            </div>
+            <div>
+                <p><b>Hiện đang:</b><span> Là Sinh Viên NĂm Nhất Ngành Công Nghệ Thông Tin</span></p>
+            </div>
+            <div>
+                <p><b>Sở thích:</b><span> nghe nhạc; Dá Bóng ; Tham gia các hoạt động của trường</span></p>
+            </div>
+            <div>
+                <p><b>Đây là web Đầu tiên của mình Nếu có sai xót thì giúp mình với, mình xin cảm
+                        ơn!</b><br><br><span><b>Nếu bạn quan tâm có thể liên hệ mình qua !</b></span></p>
+            </div>
+        </div>
+
+        <div class="bix1">
+            <li><u><a href="https://www.facebook.com/"> facebook.com</a></u></li>
+            <li><u><a href="https://www.zalo.me/"> zalo.me</a></u></li>
+
+        </div>
+        <a href="index1.html">
+            <div class="bix1">
+                <b><i>Hẹn gặp lại! Quay về trang chủ</i></b>
+            </div>
+        </a>
+    </div>
+    <script>
+        const bix1 = document.querySelectorAll('.bix1');
+
+        bix1.forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.add('active');
+                setTimeout(() => {
+                    item.classList.remove('active');
+                    item.classList.add('purple');
+                }, 250);
+            });
+        });
+    </script>
+</body>
+
+</html>
